@@ -23,9 +23,12 @@ def action():
 
     for i in range(int(no_of_nodes)):
         l1.append(Node(i))
-        print(l1[i].node_id)
+        #print(l1[i].node_id)  
         
-start_button = ttk.Button(win, text='Start', command=action)
+    for j in  range(int(no_of_nodes)):
+        l1[j].start()  
+        
+start_button = ttk.Button(win, text='Start', command=action)                        
 start_button.grid(row=1,column=1)
 
 win.mainloop()
