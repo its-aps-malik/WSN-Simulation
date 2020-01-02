@@ -1,6 +1,7 @@
 from threading import *
 from time import *
 from packets import packets
+from files import *
 class Node (Thread):
     def __init__(self, node_id):   
         Thread.__init__(self)
@@ -10,6 +11,7 @@ class Node (Thread):
         flag=True
         
         i=0
+        csv_file(self.node_id)
         while flag :
             #print (self.node_id, end=" ")
             packets()
@@ -18,3 +20,4 @@ class Node (Thread):
             if i > 10:
                 i=0
                 flag= False
+        

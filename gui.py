@@ -26,6 +26,7 @@ def action():
         #print(l1[i].node_id)  
         
     for j in  range(int(no_of_nodes)):
+        
         l1[j].start()  
         
 start_button = ttk.Button(win, text='Start', command=action)                        
